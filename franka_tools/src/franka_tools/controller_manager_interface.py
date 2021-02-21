@@ -11,7 +11,7 @@
 # **************************************************************************/
 
 # /***************************************************************************
-# Copyright (c) 2019-2020, Saif Sidhik
+# Copyright (c) 2019-2021, Saif Sidhik
  
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -374,7 +374,7 @@ class FrankaControllerManagerInterface(object):
         """
 
         if controller_name.strip() == '':
-            rospy.logdebug("FrankaControllerManagerInterface: Empty controller name in controller switch request. Ignoring.")
+            rospy.logwarn("FrankaControllerManagerInterface: Empty controller name in controller switch request. Ignoring.")
             return self._current_controller
 
         if controller_name[0] == '/':
